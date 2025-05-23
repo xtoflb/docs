@@ -14,5 +14,3 @@ apt install apache2 -y
 ```bash
 systemctl status apache2
 ```
-
-> **Note** : Pour les TP avancés, configurez les hôtes virtuels dans `/etc/apache2/sites-available/`.
