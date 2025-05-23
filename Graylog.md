@@ -12,4 +12,7 @@ Configuration du serevur NTP
 ```bash
 vim /etc/timesync.conf (à vérifier)
 ```
-
+## 3. Installation d'outils
+```bash
+apt-get install curl lsb-release a-certificates gnupg2 pwgen
+```
