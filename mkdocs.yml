@@ -1,0 +1,7 @@
+site_name: Documentation Systèmes & Réseaux
+theme:
+  name: material
+nav:
+  - Accueil: index.md
+  - Réseaux: reseaux.md
+  - Systèmes: systemes.md
