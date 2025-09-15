@@ -85,8 +85,7 @@ cd /etc/apache2/sites-available/
 cp sodecaf.conf sodecaf-ssl.conf
 nano sodecaf-ssl.conf 
 ```
- VirtualHost *:443>
-
+<VirtualHost *:443>
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/sodecaf
         DirectoryIndex sodecaf.html
@@ -97,5 +96,4 @@ nano sodecaf-ssl.conf
 
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-
 </VirtualHost>
