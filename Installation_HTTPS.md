@@ -49,3 +49,11 @@ dir = /etc/ssl
 ```bash
 openssl genrsa -out /etc/ssl/private/srvwebkey.pem 4096
 ```
+- Création du fichier de demande de certificat
+```bash
+openssl req -new -key private/srvwebkey.pem -out certs/srvwebkey_dem.pem
+```
+- Copie du fichier de demande de certificat sur la machine CA
+```bash
+scp srvwebkey_dem.pem etudiant@172.16.0.20:/home/etudiant/
+```
