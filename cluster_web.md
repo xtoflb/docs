@@ -99,3 +99,8 @@ crm configure primitive serviceWeb lsb:apache2 op monitor interval=60s op start 
 ```bash
 crm configure group servweb IPFailover serviceWeb meta migration-threshold="5"
 ```
+- Définir une préférence de noeud primaire pour l'IP virtuelle
+```bash
+crm resource move IPFailover srv-web1
+```
+
