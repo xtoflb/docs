@@ -63,5 +63,6 @@ corosync-cfgtool -s
 - Visualiser l'état du cluster
 ```bash
 crm status
+crm configure show
 ```
 
