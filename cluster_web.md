@@ -95,3 +95,7 @@ crm configure edit
 ```bash
 crm configure primitive serviceWeb lsb:apache2 op monitor interval=60s op start interval=0 timeout=60s op stop interval=0 timeout=60s
 ```
+- Regroupement des ressources IPFailover et serviceWeb
+```bash
+crm configure group servweb IPFailover serviceWeb meta migration-threshold="5"
+```
