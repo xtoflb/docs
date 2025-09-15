@@ -8,4 +8,13 @@ apt install corosync pacemaker crmsh
 corosync-keygen
 ls -l /etc/corosync/
 ```
+- Création d'un nouveau fichier de configuration de corosync
+```bash
+mv corosync.conf corosync.conf.sav
+nano corosync.conf
+```
+- Vérification de la configuration
+```bash
+corosync-cfgtool -s
+```
 
