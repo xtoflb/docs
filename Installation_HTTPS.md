@@ -64,3 +64,8 @@ On travaille sur le serveur CA
 ```bash
 openssl ca -policy policy_anything -out /etc/ssl/sodecaf/certs/srvwebcert.pem -infiles /home/etudiant/srvwebkey_dem.pem 
 ```
+- Copie du certificat sur le serveur web
+```bash
+scp srvwebcert.pem etudiant@172.16.0.10:/home/etudiant
+```
+
