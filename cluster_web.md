@@ -59,4 +59,5 @@ service {
 ```bash
 corosync-cfgtool -s
 ```
+- Cloner le serveur web, modifier IP et nom du clone
 
