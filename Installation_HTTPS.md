@@ -32,5 +32,5 @@ echo "01" > serial
 - Création de la clé privée de l'autorité de certification
 ```bash
 openssl genrsa -des3 -out /etc/ssl/sodecaf/private/cakey.pem 4096
-chmod 400 cakey.pem
+chmod 400 /etc/ssl/sodecaf/private/cakey.pem
 ```
