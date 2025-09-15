@@ -91,3 +91,7 @@ crm configure delete nom_ressource
 ```bash
 crm configure edit
 ```
+- Création d'une ressource serviceWeb
+```bash
+crm configure primitive serviceWeb lsb:apache2 op monitor interval=60s op start interval=0 timeout=60s op stop interval=0 timeout=60s
+```
