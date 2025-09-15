@@ -99,7 +99,7 @@ cp sodecaf.conf sodecaf-ssl.conf
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
-- activation du site et redémarrage du service Apache2
+- Activation du site et redémarrage du service Apache2
 ```bash
 a2ensite sodecaf-ssl.conf
 systemctl restart apache2
