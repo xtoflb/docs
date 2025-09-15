@@ -66,7 +66,7 @@ openssl ca -policy policy_anything -out /etc/ssl/sodecaf/certs/srvwebcert.pem -i
 ```
 - Copie du certificat sur le serveur web
 ```bash
-scp srvwebcert.pem etudiant@172.16.0.10:/home/etudiant
+scp /etc/ssl/sodecaf/certs/srvwebcert.pem etudiant@172.16.0.10:/home/etudiant
 ```
 On travaille sur le serveur web srv-web1
 - Déplacement et changement de propriétaire du certificat
