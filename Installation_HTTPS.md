@@ -45,7 +45,7 @@ On travaille sur le serveur web1
 ```bash
 dir = /etc/ssl
 ```
-- Création de la clé privée du serveur web : 
+- Création de la clé privée du serveur web
 ```bash
 openssl genrsa -out /etc/ssl/private/srvwebkey.pem 4096
 ```
