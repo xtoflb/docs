@@ -67,7 +67,10 @@ crm configure show
 ```
 - Désactiver le stonith (shot the other node in the head)
 ```bash
- stonith-enabled=false
+crm configure property stonith-enabled=false
 ```
-
+- Désactiver le quorum
+```bash
+crm configure property no-quorum-policy="ignore"
+```
 
