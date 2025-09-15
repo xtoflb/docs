@@ -65,4 +65,9 @@ corosync-cfgtool -s
 crm status
 crm configure show
 ```
+- Désactiver le stonith (shot the other node in the head)
+```bash
+ stonith-enabled=false
+```
+
 
