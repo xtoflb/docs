@@ -30,6 +30,30 @@ logging {
         timestamp: on
         logger_subsys {
                 subsys: QUORUM
+                debug: off
+        }
+}
+quorum {
+        provider: corosync_votequorum
+        expected_votes: 2
+        two_nodes: 1
+}
+nodelist {
+        node {
+                name: srv-web1
+                nodeid: 1
+                ring0_addr: 172.16.0.10
+        }
+        node {
+                name: srv-web2
+                nodeid: 2
+                ring0_addr: 172.16.0.11
+        }
+}
+service {
+        ver: 0
+        name: pacemaker
+}
 ```                  
 - Vérification de la configuration
 ```bash
