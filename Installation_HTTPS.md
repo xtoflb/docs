@@ -83,4 +83,19 @@ a2enmod ssl
 ```bash
 cd /etc/apache2/sites-available/
 cp sodecaf.conf sodecaf-ssl.conf
+nano sodecaf-ssl.conf 
 ```
+ VirtualHost *:443>
+
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/sodecaf
+        DirectoryIndex sodecaf.html
+
+        SSLEngine on
+        SSLCertificateFile /etc/ssl/certs/srvwebcert.pem
+        SSLCertificateKeyFile /etc/ssl/private/srvwebkey.pem
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
