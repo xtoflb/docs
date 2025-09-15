@@ -16,3 +16,8 @@ mysql gsb_valide < nom_fichier.sql
 grant all privileges on gsb_valide.* to 'userGsb'@'localhost';
 flush privileges;
 ```
+- Afficher le contenu d'une table
+```sql
+use gsb_valide;
+select * from Visiteur;
+```
