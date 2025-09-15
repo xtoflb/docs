@@ -83,7 +83,6 @@ a2enmod ssl
 ```bash
 cd /etc/apache2/sites-available/
 cp sodecaf.conf sodecaf-ssl.conf
-nano sodecaf-ssl.conf 
 ```
 - Modification du fichier sodecaf-ssl.conf
 ```bash
