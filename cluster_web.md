@@ -87,3 +87,7 @@ crm node standby
 crm resource stop nom_ressource
 crm configure delete nom_ressource
 ```
+- Editer la configuration : à utiliser avec prudence
+```bash
+crm configure edit
+```
