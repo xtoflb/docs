@@ -68,4 +68,10 @@ openssl ca -policy policy_anything -out /etc/ssl/sodecaf/certs/srvwebcert.pem -i
 ```bash
 scp srvwebcert.pem etudiant@172.16.0.10:/home/etudiant
 ```
+On travaille sur le serveur web srv-web1
+- Déplacement et changement de propriétaire du certificat
+```bash
+mv /home/etudiant/srvwebcert.pem /etc/ssl/certs/
+chown root:root /etc/ssl/certs/srvwebcert.pem
+```
 
