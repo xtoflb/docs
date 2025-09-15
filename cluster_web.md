@@ -73,4 +73,7 @@ crm configure property stonith-enabled=false
 ```bash
 crm configure property no-quorum-policy="ignore"
 ```
-
+- Configuration du failover IP (IP virtuelle)
+```bash
+crm configure primitive IPFailover ocf:heartbeat:IPaddr2 params ip=172.16.0.12 cidr_netmask=24 nic=ens192 iflabel=VIP
+```
