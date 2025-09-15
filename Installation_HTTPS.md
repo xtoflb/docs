@@ -85,7 +85,7 @@ cd /etc/apache2/sites-available/
 cp sodecaf.conf sodecaf-ssl.conf
 ```
 - Modification du fichier sodecaf-ssl.conf
-```bash
+```apache
 <VirtualHost *:443>
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/sodecaf
