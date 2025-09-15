@@ -78,6 +78,7 @@ chown root:root /etc/ssl/certs/srvwebcert.pem
 - Activation du module ssl sous Apache2
 ```bash
 a2enmod ssl
+a2enmod rewrite
 ```
 - Création du virtualhost pour https
 ```bash
@@ -97,6 +98,11 @@ cp sodecaf.conf sodecaf-ssl.conf
 
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+<VirtualHost *:80>
+        RewriteEngine On
+        RewriteCond %{HTTPS} !=on
+        RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
 </VirtualHost>
 ```
 - Activation du site et redémarrage du service Apache2
