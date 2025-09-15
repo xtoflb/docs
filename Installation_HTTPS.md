@@ -74,7 +74,7 @@ On travaille sur le serveur web srv-web1
 mv /home/etudiant/srvwebcert.pem /etc/ssl/certs/
 chown root:root /etc/ssl/certs/srvwebcert.pem
 ```
-## 3. Configuration d'Apache2 sur le serveur web
+## 5. Configuration d'Apache2 sur le serveur web
 - Activation du module ssl sous Apache2
 ```bash
 a2enmod ssl
@@ -109,4 +109,9 @@ cp sodecaf.conf sodecaf-ssl.conf
 ```bash
 a2ensite sodecaf-ssl.conf
 systemctl restart apache2
+```
+## 6. Bonus : création d'un certificat autosigné, directement sur le serveur web
+```bash
+openssl genrsa -out /etc/ssl/private/srvwebkey.pem 4096
+openssl req -new -x509 -days 1825 -key /etc/ssl/private/srvwebkey.pem -out /etc/ssl/certs/srvwebcert.pem
 ```
