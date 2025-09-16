@@ -103,4 +103,7 @@ crm configure group servweb IPFailover serviceWeb meta migration-threshold="5"
 ```bash
 crm resource move IPFailover srv-web1
 ```
-
+- Effacer les erreurs sur une ressource
+```bash
+crm resource cleanup IPFailover
+``` 
