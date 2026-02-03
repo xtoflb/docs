@@ -76,9 +76,8 @@ Combinaisons usuelles :
 ## 3. Commandes utiles sur les clients
 
 ### Côté Windows
-
-- Afficher la configuration IPv6 :
-
 ```powershell
+ipconfig /release6
+ipconfig /renew6
 ipconfig
 ipconfig /all
