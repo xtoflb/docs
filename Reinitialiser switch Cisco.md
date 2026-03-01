@@ -2,8 +2,13 @@
 
 Pour effacer complètement la configuration d'un switch Cisco Catalyst 2960 via la console, utilisez les commandes standard en mode privilégié si vous avez déjà accès. Cela supprime la configuration de démarrage (startup-config) et nécessite un redémarrage pour appliquer les changements.
 
-## Procédure standard (accès console existant)
+## Vérification préalable
+Vérifiez les configurations avant effacement :
 
+- `show running-config` pour la config en cours.
+- `show startup-config` pour la config de démarrage.
+
+## Procédure standard (accès console existant)
 Connectez-vous en mode EXEC utilisateur, puis passez en mode privilégié avec `enable`.
 
 ```
@@ -16,15 +21,6 @@ reload
 - Confirmez le rechargement (le switch redémarre sans configuration persistante).
 
 Après redémarrage, le switch sera aux paramètres d'usine, avec un dialogue de configuration initiale optionnel (répondez `no` pour passer en CLI).
-
-## Vérification préalable
-
-Vérifiez les configurations avant effacement :
-
-- `show running-config` pour la config en cours.
-- `show startup-config` pour la config de démarrage.
-
-**Attention** : Sauvegardez toute config utile avant (`copy running-config startup-config` ou via TFTP). Le processus est irréversible sans backup.
 
 ## Alternative si mode ROMMON (sans accès enable)
 
