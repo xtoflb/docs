@@ -22,6 +22,21 @@ reload
 
 Après redémarrage, le switch sera aux paramètres d'usine, avec un dialogue de configuration initiale optionnel (répondez `no` pour passer en CLI).
 
+## Supprimer les VLANs
+Entrez en mode privilégié (enable), puis configuration globale (configure terminal).
+
+```
+no vlan 10
+no vlan 20-30  (pour une plage)
+exit
+write memory  (ou copy running-config startup-config)
+```
+
+Vérifiez
+```
+show vlan brief
+```
+
 ## Alternative si mode ROMMON (sans accès enable)
 
 Si vous n'avez pas les privilèges ou un mot de passe bloque l'accès :
